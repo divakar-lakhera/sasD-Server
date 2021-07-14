@@ -116,3 +116,9 @@ class historyBlock:
             if has_error:
                 return error
             return "OK"
+
+    def print_good(self):
+        print("<{}> ".format(self.creation_time), end="")
+        for key in self.current.keys():
+            print("{}:{}".format(key, self.current[key]), end=" | ")
+        print()
